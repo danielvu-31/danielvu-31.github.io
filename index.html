@@ -39,7 +39,7 @@
 
                   <p style="text-align:center">
                     <a href="mailto:duchongvu01@gmail.com">Email</a> &nbsp;/&nbsp;
-                    <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="data/ducvu_CV.pdf">CV</a> &nbsp;/&nbsp;
                     <a href="https://scholar.google.co.in/citations?user=mUHCYJsAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
                     <a href="https://github.com/danielvu-31/">Github</a>
                   </p>
@@ -70,7 +70,10 @@
             <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>Research</h2>
               <p>
-                My research focuses on advancing generative AI by leveraging <strong>efficient one-step generation for real-world applications </strong> such as video enhancement and image inpainting. I am particularly interested in diffusion-based methods that achieve high-quality results with minimal computational cost, making generative models more <strong>practical and accessible</strong>. In addition to efficiency, I am also working on <strong>adversarial defenses</strong> to ensure the <strong>responsible and safe deployment</strong> of generative video models. Looking ahead, I aim to expand my work toward <strong>multimodal and video generation</strong>, focusing on improving fine-grained temporal consistency and enhancing user-driven controllability.
+                My research focuses on advancing generative AI by leveraging <strong>efficient one-step generation for real-world applications </strong> such as video enhancement and image inpainting. I am particularly interested in diffusion-based methods that achieve high-quality results with minimal computational cost, making generative models more <strong>practical and accessible</strong>. In addition to efficiency, I am also working on <strong>adversarial defenses</strong> to ensure the <strong>responsible and safe deployment</strong> of generative video models.
+              </p>
+              <p style="text-align:center; font-weight:700; font-size:1.15em; margin-top:10px;">
+                Looking ahead, I aim to expand my research toward multimodal and video generation, with a focus on improving fine-grained temporal consistency and efficiency, while incorporating physically aware conditioning into these models.
               </p>
             </td>
           </tr>
@@ -168,6 +171,47 @@
             <p></p>
             <p>
             A highly efficient one-step inversion diffusion network for high-quality few-step image inpainting.
+            </p>
+          </td>
+        </tr>
+        <tr onmouseout="vd_stop()" onmouseover="vd_start()">
+          <td style="padding:16px;width:20%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='vd_image'><video  width=100% muted autoplay loop>
+              <source src="images/videodrift_5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video></div>
+              <img src='images/videodrift.png' width=100%>
+            </div>
+            <script type="text/javascript">
+              function vd_start() {
+                document.getElementById('vd_image').style.opacity = "1";
+              }
+
+              function vd_stop() {
+                document.getElementById('vd_image').style.opacity = "0";
+              }
+              vd_stop()
+            </script>
+          </td>
+          <td style="padding:8px;width:80%;vertical-align:middle">
+            <a>
+              <span class="papertitle">VideoDrift: Plug-and-Play Video Refinement for Diffusion Models via KV-Anchored Attention.</span>
+            </a>
+            <br>
+            Ngan Nguyen,
+            <strong>Duc Vu</strong>,
+            <a href="https://nttung1110.github.io/">Trong-Tung Nguyen</a>,
+            Phuc Hong Lai,
+            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
+            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
+            <br>
+            <em>Under Review</em>, 2025 &nbsp
+            <br>
+            <!-- <a href="https://arxiv.org/abs/2510.21250">ArXiv</a> -->
+            <p></p>
+            <p>
+            A plug-and-play, backbone-agnostic video enhancer with low compute: each frame requires only inversion plus one generator pass, making it easy to deploy on outputs from diverse T2V systems.
             </p>
           </td>
         </tr>
