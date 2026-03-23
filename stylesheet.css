@@ -107,3 +107,15 @@ span.highlight {
   height: 100%;
   object-fit: contain; /* or cover */
 }
+
+/* Hide ClustrMaps widget (script still runs for visitor tracking) */
+[id*="clustrmaps"],
+[class*="clustrmaps"],
+[class*="clstrmap"],
+iframe[src*="clustrmaps"],
+a[href*="clustrmaps.com"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
