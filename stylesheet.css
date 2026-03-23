@@ -21,6 +21,15 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Links in paper listings — muted so author-me stands out */
+main a {
+  color: #5d6d7e;
+}
+
+main a:hover {
+  color: #7d8fa3;
+}
+
 /* --- Headings --- */
 h2 {
   font-size: 28px;
@@ -86,9 +95,11 @@ span.highlight {
 .author-me {
   font-weight: 700;
   color: #007bff;
-  background: linear-gradient(180deg, transparent 60%, rgba(0, 123, 255, 0.2) 60%);
-  padding: 0 2px;
-  border-radius: 2px;
+  background-color: rgba(0, 123, 255, 0.18);
+  padding: 1px 6px;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* --- Conference/venue badge --- */
