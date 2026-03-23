@@ -85,60 +85,6 @@
       <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:16px;width:100%;vertical-align:middle">
-              <h2>Selected Preprints</h2>
-              <p>
-                <strong>* denotes equal contribution</strong>
-              </p>
-            </td>
-          </tr>
-      </tbody></table>
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr onmouseout="vd_stop()" onmouseover="vd_start()">
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two" id='vd_image'><video style="width:100%; height:auto;" muted autoplay loop>
-              <source src="images/videodrift_5.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img style="width:100%; height:auto;" src='images/videodrift.png' width=100%>
-            </div>
-            <script type="text/javascript">
-              function vd_start() {
-                document.getElementById('vd_image').style.opacity = "1";
-              }
-
-              function vd_stop() {
-                document.getElementById('vd_image').style.opacity = "0";
-              }
-              vd_stop()
-            </script>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a>
-              <span class="papertitle">VideoDrift: Plug-and-Play Video Refinement for Diffusion Models via KV-Anchored Attention.</span>
-            </a>
-            <br>
-            Ngan Nguyen,
-            <strong>Duc Vu</strong>,
-            <a href="https://nttung1110.github.io/">Trong-Tung Nguyen</a>,
-            Phuc Hong Lai,
-            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <em>Under Review</em>, 2025 &nbsp
-            <br>
-            <!-- <a href="https://arxiv.org/abs/2510.21250">ArXiv</a> -->
-            <p></p>
-            <p>
-            A plug-and-play, backbone-agnostic video enhancer with low compute: each frame requires only inversion plus one generator pass, making it easy to deploy on outputs from diverse T2V systems.
-            </p>
-          </td>
-        </tr>
-        </tbody></table>
-
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>Selected Publications</h2>
               <p>
                 <strong>* denotes equal contribution</strong>
@@ -147,37 +93,27 @@
           </tr>
       </tbody></table>
       <table style="width:100%;max-width:800px;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr onmouseout="anti_stop()" onmouseover="anti_start()">
+        <tr>
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <div class="two" id='anti_image'><video  width=100% muted autoplay loop>
+              <div class="two"><video width=100% muted autoplay loop>
               <source src="images/anti.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video></div>
               <img src='images/anti.jpg' width=100%>
             </div>
-            <script type="text/javascript">
-              function anti_start() {
-                document.getElementById('anti_image').style.opacity = "1";
-              }
-
-              function anti_stop() {
-                document.getElementById('anti_image').style.opacity = "0";
-              }
-              anti_stop()
-            </script>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
             <a>
               <span class="papertitle">Anti-I2V: Safeguarding your photos from malicious image-to-video generation.</span>
             </a>
             <br>
-            <strong>Duc Vu</strong>,
+            <span class="author-me">Duc Vu</span>,
             <a href="https://aengusng8.github.io/">Anh Nguyen</a>,
             Chi Tran,
             <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
             <br>
-            <em>CVPR</em>, 2026 &nbsp
+            <span class="venue">CVPR</span>, 2026 &nbsp
             <br>
             <!-- <a href="https://arxiv.org/abs/2510.21250">ArXiv</a> -->
             <p></p>
@@ -187,32 +123,22 @@
           </td>
         </tr>
 
-        <tr onmouseout="inverfill_stop()" onmouseover="inverfill_start()">
+        <tr>
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <div class="two" id='inverfill_image'><video  width=100% muted autoplay loop>
+              <div class="two"><video width=100% muted autoplay loop>
               <source src="images/inverfill.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video></div>
               <img src='images/inverfill.png' width=100%>
             </div>
-            <script type="text/javascript">
-              function inverfill_start() {
-                document.getElementById('inverfill_image').style.opacity = "1";
-              }
-
-              function inverfill_stop() {
-                document.getElementById('inverfill_image').style.opacity = "0";
-              }
-              inverfill_stop()
-            </script>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
             <a>
               <span class="papertitle">InverFill: One-Step Inversion for Enhanced Few-Step Diffusion Inpainting.</span>
             </a>
             <br>
-            <strong>Duc Vu*</strong>,
+            <span class="author-me">Duc Vu*</span>,
             Kien Nguyen*,
             <a href="https://nttung1110.github.io/">Trong-Tung Nguyen*</a>,
             Ngan Nguyen,
@@ -221,7 +147,7 @@
             <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
             <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
             <br>
-            <em>CVPR</em>, 2026 &nbsp
+            <span class="venue">CVPR</span>, 2026 &nbsp
             <br>
             <!-- <a href="https://arxiv.org/abs/2510.21250">ArXiv</a> -->
             <p></p>
@@ -231,25 +157,15 @@
           </td>
         </tr>
 
-        <tr onmouseout="shortcut_stop()" onmouseover="shortcut_start()">
+        <tr>
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <div class="two" id='shortcut_image'><video  width=100% muted autoplay loop>
+              <div class="two"><video width=100% muted autoplay loop>
               <source src="images/shortcut.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video></div>
               <img src='images/shortcut_before.png' width=100%>
             </div>
-            <script type="text/javascript">
-              function shortcut_start() {
-                document.getElementById('shortcut_image').style.opacity = "1";
-              }
-
-              function shortcut_stop() {
-                document.getElementById('shortcut_image').style.opacity = "0";
-              }
-              shortcut_stop()
-            </script>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
             <a href="https://arxiv.org/abs/2510.21250">
@@ -258,13 +174,13 @@
             <br>
             <a href="https://aengusng8.github.io/">Anh Nguyen*</a>, 
             <a href="https://viettmab.github.io/">Viet Nguyen*</a>,
-            <strong>Duc Vu</strong>,
+            <span class="author-me">Duc Vu</span>,
             <a href="https://trung-dt.com/">Trung Dao</a>,
             Chi Tran,
             <a href="https://scholar.google.com.vn/citations?user=PnwSuNMAAAAJ&hl=vi">Toan Tran</a>,
             <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
             <br>
-            <em>NeurIPS</em>, 2025 &nbsp
+            <span class="venue">NeurIPS</span>, 2025 &nbsp
             <br>
             <a href="https://arxiv.org/abs/2510.21250">ArXiv</a>
             <p></p>
@@ -274,25 +190,15 @@
           </td>
         </tr>
 
-        <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+        <tr>
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <div class="two" id='ever_image'><video  width=100% muted autoplay loop>
+              <div class="two"><video width=100% muted autoplay loop>
               <source src="images/swiftbrushv2_after.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video></div>
               <img src='images/swiftbrushv2_before.jpg' width=100%>
             </div>
-            <script type="text/javascript">
-              function ever_start() {
-                document.getElementById('ever_image').style.opacity = "1";
-              }
-
-              function ever_stop() {
-                document.getElementById('ever_image').style.opacity = "0";
-              }
-              ever_stop()
-            </script>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
             <a href="https://swiftbrushv2.github.io/">
@@ -302,12 +208,12 @@
             <a href="https://trung-dt.com/">Trung Dao</a>, 
             <a href="https://thuanz123.github.io/">Thuan Hoang Nguyen*</a>,
             <a href="https://luvata.github.io/">Thanh Le*</a>,
-            <strong>Duc Vu*</strong>,
+            <span class="author-me">Duc Vu*</span>,
             <a href="https://www.khoinguyen.org/">Khoi Nguyen</a>,
             <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
             <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
             <br>
-            <em>ECCV</em>, 2024 &nbsp
+            <span class="venue">ECCV</span>, 2024 &nbsp
             <br>
             <a href="https://swiftbrushv2.github.io/">Project page</a>
             /
@@ -319,25 +225,15 @@
           </td>
         </tr>
         
-        <tr onmouseout="efhq_stop()" onmouseover="efhq_start()">
+        <tr>
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <div class="two" id='efhq_image'><video  width=100% muted autoplay loop>
+              <div class="two"><video width=100% muted autoplay loop>
               <source src="images/efhq_after.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video></div>
               <img src='images/efhq_before.png' width=100%>
             </div>
-            <script type="text/javascript">
-              function efhq_start() {
-                document.getElementById('efhq_image').style.opacity = "1";
-              }
-
-              function efhq_stop() {
-                document.getElementById('efhq_image').style.opacity = "0";
-              }
-              efhq_stop()
-            </script>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
             <a href="https://vinairesearch.github.io/EFHQ/">
@@ -345,11 +241,11 @@
             </a>
             <br>
             <a href="https://trung-dt.com/">Trung Dao*</a>, 
-            <strong>Duc Vu*</strong>,
+            <span class="author-me">Duc Vu*</span>,
             <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
             <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
             <br>
-            <em>CVPR</em>, 2024 &nbsp
+            <span class="venue">CVPR</span>, 2024 &nbsp
             <br>
             <a href="https://vinairesearch.github.io/EFHQ/">Project page</a>
             /
@@ -361,6 +257,49 @@
           </td>
         </tr>
       </tbody></table>
+
+      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:16px;width:100%;vertical-align:middle">
+              <h2>Selected Preprints</h2>
+              <p>
+                <strong>* denotes equal contribution</strong>
+              </p>
+            </td>
+          </tr>
+      </tbody></table>
+      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:16px;width:20%;vertical-align:middle">
+            <div class="one">
+              <div class="two"><video style="width:100%; height:auto;" muted autoplay loop>
+              <source src="images/videodrift_5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video></div>
+              <img style="width:100%; height:auto;" src='images/videodrift.png' width=100%>
+            </div>
+          </td>
+          <td style="padding:8px;width:80%;vertical-align:middle">
+            <a>
+              <span class="papertitle">VideoDrift: Plug-and-Play Video Refinement for Diffusion Models via KV-Anchored Attention.</span>
+            </a>
+            <br>
+            Ngan Nguyen,
+            <span class="author-me">Duc Vu</span>,
+            <a href="https://nttung1110.github.io/">Trong-Tung Nguyen</a>,
+            Phuc Hong Lai,
+            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
+            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
+            <br>
+            <span class="venue venue-under-review">Under Review</span>, 2025 &nbsp
+            <br>
+            <p></p>
+            <p>
+            A plug-and-play, backbone-agnostic video enhancer with low compute: each frame requires only inversion plus one generator pass, making it easy to deploy on outputs from diverse T2V systems.
+            </p>
+          </td>
+        </tr>
+        </tbody></table>
     </main>
   </body>
 </html>
