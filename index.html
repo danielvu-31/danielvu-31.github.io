@@ -1,305 +1,425 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <meta charset="UTF-8">
     <title>Duc Vu</title>
-
     <meta name="author" content="Duc Vu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap">
-    
+
+    <!-- Performance: preconnect to external origins before any requests fire -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://clustrmaps.com">
+
+    <!-- Fonts: swap prevents invisible text flash -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+    <!-- Font Awesome: non-blocking load via print media trick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
 
   <body>
+    <!-- ClustrMaps hidden tracking widget (script still fires for visitor counts) -->
     <div id="clustrmaps-wrapper" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;">
       <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4KxX8y1SblgUbjw2S9VdmpLBtRyg7wdhej9LhLAm7Zg&cl=ffffff&w=a"></script>
     </div>
-    <header>
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr style="padding:0px">
-          <td style="padding:0px">
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p class="name" style="text-align: center;">
-                    Duc Vu
-                  </p>
 
-                  <p>
-                    🫶 Hi! I'm Duc. Nice to meet yall! 🫶 I am an AI research resident at 
-                    <a href="https://www.qualcomm.com/">Qualcomm Research</a> in Vietnam, where I am fortunate to be supervised by 
-                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Dr. Anh Tran</a>.
-                    Prior to this, I received my Bachelor of Science in Data Science & Statistics and Bachelor of Arts in Economics 
-                    from Miami University - Oxford in the U.S (2024).</a>
-                  </p>
+    <div class="page-wrapper">
 
-                  <p style="text-align:center; font-weight:700; font-size:1.15em; margin-top:10px;">
-                    I am seeking a PhD in Computer Science for Fall 2026 and excited to pursue impactful research. 🚀📚
-                  </p>
+      <!-- ===== HERO HEADER ===== -->
+      <header class="profile-section">
+        <div class="header-bg-glow"></div>
+        <div class="container">
+          <div class="profile-grid">
 
-                  <p style="text-align:center">
-                    <a href="mailto:duchongvu01@gmail.com">Email</a> &nbsp;/&nbsp;
-                    <a href="data/CV0326.pdf">CV</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.co.in/citations?user=mUHCYJsAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/danielvu-31/">Github</a>
-                  </p>
-                </td>
-                <td style="padding:2.5%; width: 25%; max-width: 25%;">
-                  <a href="images/IMG_2901.png">
-                    <img style="
-                      width: 100%;
-                      aspect-ratio: 4 / 5; /* A gentle portrait rectangle, not too long */
-                      object-fit: cover;
-                      object-position: center 75%;
-                      border-radius: 12px; /* A nice, soft rounded corner */"
-                      alt="profile photo"
-                      src="images/IMG_2901.png"
-                      class="hoverZoomLink">
+            <div class="profile-text">
+              <h1 class="name">Duc Vu</h1>
+              <p class="bio">
+                👋 Hi! I'm Duc. Nice to meet y'all! I am an incoming Fall 2026 PhD student at Rutgers University
+                under the supervision of <a href="https://scholar.google.com/citations?user=a7VNhCIAAAAJ&hl=en">Distinguished Prof. Dimitris N. Metaxas</a>. I am currently a predoctoral
+                researcher at <a href="https://www.qualcomm.com/">Qualcomm AI Research</a> 📡, where I am fortunate
+                to be supervised by <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Dr. Anh Tran</a>.
+                Prior to this, I received my B.S. in Data Science &amp; Statistics and B.A. in Economics
+                from 🎓 Miami University - Oxford in the U.S. (2024).
+              </p>
+              <div class="phd-banner">
+                🔍&nbsp; Open to Summer 2027 Research Internships or research collaborations. Let’s create impactful work together!&nbsp; 🚀
+              </div>
+              <nav class="social-links">
+                <a href="mailto:duchongvu01@gmail.com" class="social-link">
+                  <i class="fa-solid fa-envelope"></i><span>Email</span>
+                </a>
+                <a href="data/CV0326.pdf" class="social-link">
+                  <i class="fa-solid fa-file-lines"></i><span>CV</span>
+                </a>
+                <a href="https://scholar.google.co.in/citations?user=mUHCYJsAAAAJ&hl=en" class="social-link">
+                  <i class="fa-solid fa-graduation-cap"></i><span>Scholar</span>
+                </a>
+                <!-- TODO: update to your actual X/Twitter handle -->
+                <a href="https://x.com/danielvu31" class="social-link">
+                  <i class="fa-brands fa-x-twitter"></i><span>Twitter</span>
+                </a>
+                <a href="https://github.com/danielvu-31/" class="social-link">
+                  <i class="fa-brands fa-github"></i><span>GitHub</span>
+                </a>
+              </nav>
+            </div>
+
+            <div class="profile-photo-wrapper">
+              <a href="images/IMG_2901.png">
+                <img src="images/IMG_2901.png" alt="Duc Vu" class="profile-photo">
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== MAIN ===== -->
+      <main>
+        <div class="container">
+
+          <!-- Research -->
+          <section class="section reveal" data-num="01">
+            <h2>Research</h2>
+            <div class="research-card">
+              <p class="research-text">
+                My research interests include <strong>physics-aware and object-interaction video generation</strong>,
+                with the goal of developing generative models that can better understand, capture, and simulate
+                real-world physical dynamics. Previously, my work focused on <strong>diffusion-based generative
+                models</strong>, with an emphasis on diffusion distillation and
+                <strong>efficient one-step generation</strong> techniques for practical applications such as video
+                enhancement and image inpainting. I am particularly interested in methods that maintain high
+                generation quality while reducing computational cost, making generative AI more
+                <strong>scalable, efficient, and accessible</strong>. I have also worked on
+                <strong>adversarial defenses</strong> to support the safe and responsible deployment of generative
+                video models.
+              </p>
+              <div class="research-chips">
+                <span class="chip chip-purple"><i class="fa-solid fa-earth-americas"></i> Physics-Aware Video Gen</span>
+                <span class="chip chip-blue"><i class="fa-solid fa-bolt"></i> One/Few-Step Diffusion</span>
+                <span class="chip chip-blue"><i class="fa-solid fa-arrow-down-short-wide"></i> Diffusion Distillation</span>
+                <span class="chip chip-teal"><i class="fa-solid fa-film"></i> Video Enhancement</span>
+                <span class="chip chip-amber"><i class="fa-solid fa-image"></i> Image Inpainting</span>
+                <span class="chip chip-rose"><i class="fa-solid fa-shield-halved"></i> Adversarial Defense</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Selected Publications -->
+          <section class="section reveal" data-num="02">
+            <h2>Selected Publications</h2>
+            <p class="contrib-note"><strong>* denotes equal contribution</strong></p>
+            <div class="papers-list">
+
+              <!-- Anti-I2V -->
+              <div class="paper-card reveal" data-venue="cvpr">
+                <div class="paper-media">
+                  <video muted autoplay loop playsinline preload="none" poster="images/anti.jpg">
+                    <source src="images/anti.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="paper-info">
+                  <a href="https://qualcomm-ai-research.github.io/anti-I2V/" class="paper-title-link">
+                    <span class="papertitle">Anti-I2V: Safeguarding your photos from malicious image-to-video generation.</span>
                   </a>
-                </td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr>
-      </table>
-    </header>
+                  <div class="authors">
+                    <span class="author-me">Duc Vu</span>,
+                    <a href="https://aengusng8.github.io/">Anh Nguyen</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=D6WZnA0AAAAJ">Chi Tran</a>,
+                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>
+                  </div>
+                  <div class="paper-meta">
+                    <span class="venue venue-cvpr">CVPR 2026</span>
+                    <div class="paper-links">
+                      <a href="https://qualcomm-ai-research.github.io/anti-I2V/" class="paper-link">
+                        <i class="fa-solid fa-globe"></i> Website
+                      </a>
+                      <a href="https://arxiv.org/abs/2603.24570" class="paper-link">
+                        <i class="fa-solid fa-file-lines"></i> ArXiv
+                      </a>
+                    </div>
+                  </div>
+                  <p class="paper-desc">
+                    A memory-efficient adversarial attack against diverse image-to-video diffusion models,
+                    enabled by robust dual-space perturbation optimization.
+                  </p>
+                </div>
+              </div>
 
-    <main>
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:16px;width:100%;vertical-align:middle">
-              <h2>Research</h2>
-              <p>
-                My research focuses on advancing generative AI by leveraging <strong>efficient one-step generation for real-world applications </strong> such as video enhancement and image inpainting. I am particularly interested in diffusion-based methods that achieve high-quality results with minimal computational cost, making generative models more <strong>practical and accessible</strong>. In addition to efficiency, I am also working on <strong>adversarial defenses</strong> to ensure the <strong>responsible and safe deployment</strong> of generative video models.
-              </p>
-              <p style="text-align:center; font-weight:700; font-size:1.15em; margin-top:10px;">
-                I aim to expand my research toward multimodal and video generation, with a focus on improving fine-grained temporal consistency and efficiency, while incorporating physically aware conditioning into these models.
-              </p>
-            </td>
-          </tr>
-      </tbody></table>
+              <!-- InverFill -->
+              <div class="paper-card reveal" data-venue="cvpr">
+                <div class="paper-media">
+                  <video muted autoplay loop playsinline preload="none" poster="images/inverfill.png">
+                    <source src="images/inverfill.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="paper-info">
+                  <a href="https://qualcomm-ai-research.github.io/InverFill/" class="paper-title-link">
+                    <span class="papertitle">InverFill: One-Step Inversion for Enhanced Few-Step Diffusion Inpainting.</span>
+                  </a>
+                  <div class="authors">
+                    <span class="author-me">Duc Vu*</span>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=FewSoUkAAAAJ">Kien Nguyen*</a>,
+                    <a href="https://nttung1110.github.io/">Trong-Tung Nguyen*</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=QCQPEhoAAAAJ">Ngan Nguyen</a>,
+                    <a href="https://phongnhhn.info/">Phong Nguyen</a>,
+                    <a href="https://www.khoinguyen.org/">Khoi Nguyen</a>,
+                    <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
+                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>
+                  </div>
+                  <div class="paper-meta">
+                    <span class="venue venue-cvpr">CVPR 2026</span>
+                    <div class="paper-links">
+                      <a href="https://qualcomm-ai-research.github.io/InverFill/" class="paper-link">
+                        <i class="fa-solid fa-globe"></i> Website
+                      </a>
+                      <a href="https://arxiv.org/abs/2603.23463" class="paper-link">
+                        <i class="fa-solid fa-file-lines"></i> ArXiv
+                      </a>
+                    </div>
+                  </div>
+                  <p class="paper-desc">
+                    A highly efficient one-step inversion diffusion network for high-quality few-step image inpainting.
+                  </p>
+                </div>
+              </div>
 
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:16px;width:100%;vertical-align:middle">
-              <h2>Selected Publications</h2>
-              <p>
-                <strong>* denotes equal contribution</strong>
-              </p>
-            </td>
-          </tr>
-      </tbody></table>
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two"><video width=100% muted autoplay loop>
-              <source src="images/anti.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/anti.jpg' width=100%>
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a>
-              <span class="papertitle">Anti-I2V: Safeguarding your photos from malicious image-to-video generation.</span>
-            </a>
-            <br>
-            <span class="author-me">Duc Vu</span>,
-            <a href="https://aengusng8.github.io/">Anh Nguyen</a>,
-            Chi Tran,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <span class="venue">CVPR</span>, 2026 &nbsp
-            <br>
-            <!-- <a href="https://arxiv.org/abs/2510.21250">ArXiv</a> -->
-            <p></p>
-            <p>
-            A memory‑efficient adversarial attack against diverse image‑to‑video diffusion models, enabled by robust dual‑space perturbation optimization.
-            </p>
-          </td>
-        </tr>
+              <!-- iSM / Shortcut -->
+              <div class="paper-card reveal" data-venue="neurips">
+                <div class="paper-media">
+                  <video muted autoplay loop playsinline preload="none" poster="images/shortcut_before.png">
+                    <source src="images/shortcut.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="paper-info">
+                  <a href="https://arxiv.org/abs/2510.21250" class="paper-title-link">
+                    <span class="papertitle">Improved Training Technique for Shortcut Models.</span>
+                  </a>
+                  <div class="authors">
+                    <a href="https://aengusng8.github.io/">Anh Nguyen*</a>,
+                    <a href="https://viettmab.github.io/">Viet Nguyen*</a>,
+                    <span class="author-me">Duc Vu</span>,
+                    <a href="https://trung-dt.com/">Trung Dao</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=D6WZnA0AAAAJ">Chi Tran</a>,
+                    <a href="https://scholar.google.com.vn/citations?user=PnwSuNMAAAAJ&hl=vi">Toan Tran</a>,
+                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>
+                  </div>
+                  <div class="paper-meta">
+                    <span class="venue venue-neurips">NeurIPS 2025</span>
+                    <div class="paper-links">
+                      <a href="https://arxiv.org/abs/2510.21250" class="paper-link">
+                        <i class="fa-solid fa-file-lines"></i> ArXiv
+                      </a>
+                    </div>
+                  </div>
+                  <p class="paper-desc">
+                    iSM resolves five major shortcut-model flaws with dynamic guidance, wavelet loss, sOT,
+                    and Twin EMA, yielding markedly better image generation.
+                  </p>
+                </div>
+              </div>
 
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two"><video width=100% muted autoplay loop>
-              <source src="images/inverfill.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/inverfill.png' width=100%>
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a>
-              <span class="papertitle">InverFill: One-Step Inversion for Enhanced Few-Step Diffusion Inpainting.</span>
-            </a>
-            <br>
-            <span class="author-me">Duc Vu*</span>,
-            Kien Nguyen*,
-            <a href="https://nttung1110.github.io/">Trong-Tung Nguyen*</a>,
-            Ngan Nguyen,
-            <a href="https://phongnhhn.info/">Phong Nguyen</a>,
-            <a href="https://www.khoinguyen.org/">Khoi Nguyen</a>,
-            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <span class="venue">CVPR</span>, 2026 &nbsp
-            <br>
-            <!-- <a href="https://arxiv.org/abs/2510.21250">ArXiv</a> -->
-            <p></p>
-            <p>
-            A highly efficient one-step inversion diffusion network for high-quality few-step image inpainting.
-            </p>
-          </td>
-        </tr>
+              <!-- SwiftBrush v2 -->
+              <div class="paper-card reveal" data-venue="eccv">
+                <div class="paper-media">
+                  <video muted autoplay loop playsinline preload="none" poster="images/swiftbrushv2_before.jpg">
+                    <source src="images/swiftbrushv2_after.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="paper-info">
+                  <a href="https://swiftbrushv2.github.io/" class="paper-title-link">
+                    <span class="papertitle">SwiftBrush v2: Make Your One-step Diffusion Model Better Than Its Teacher.</span>
+                  </a>
+                  <div class="authors">
+                    <a href="https://trung-dt.com/">Trung Dao</a>,
+                    <a href="https://thuanz123.github.io/">Thuan Hoang Nguyen*</a>,
+                    <a href="https://luvata.github.io/">Thanh Le*</a>,
+                    <span class="author-me">Duc Vu*</span>,
+                    <a href="https://www.khoinguyen.org/">Khoi Nguyen</a>,
+                    <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
+                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>
+                  </div>
+                  <div class="paper-meta">
+                    <span class="venue venue-eccv">ECCV 2024</span>
+                    <div class="paper-links">
+                      <a href="https://swiftbrushv2.github.io/" class="paper-link">
+                        <i class="fa-solid fa-globe"></i> Website
+                      </a>
+                      <a href="http://arxiv.org/abs/2408.14176" class="paper-link">
+                        <i class="fa-solid fa-file-lines"></i> ArXiv
+                      </a>
+                    </div>
+                  </div>
+                  <p class="paper-desc">
+                    An improved SwiftBrush version that makes the one-step diffusion student beats its multi-step teacher.
+                  </p>
+                </div>
+              </div>
 
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two"><video width=100% muted autoplay loop>
-              <source src="images/shortcut.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/shortcut_before.png' width=100%>
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a href="https://arxiv.org/abs/2510.21250">
-              <span class="papertitle">Improved Training Technique for Shortcut Models.</span>
-            </a>
-            <br>
-            <a href="https://aengusng8.github.io/">Anh Nguyen*</a>, 
-            <a href="https://viettmab.github.io/">Viet Nguyen*</a>,
-            <span class="author-me">Duc Vu</span>,
-            <a href="https://trung-dt.com/">Trung Dao</a>,
-            Chi Tran,
-            <a href="https://scholar.google.com.vn/citations?user=PnwSuNMAAAAJ&hl=vi">Toan Tran</a>,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <span class="venue">NeurIPS</span>, 2025 &nbsp
-            <br>
-            <a href="https://arxiv.org/abs/2510.21250">ArXiv</a>
-            <p></p>
-            <p>
-            iSM resolves five major shortcut-model flaws with dynamic guidance, wavelet loss, sOT, and Twin EMA, yielding markedly better image generation.
-            </p>
-          </td>
-        </tr>
+              <!-- EFHQ -->
+              <div class="paper-card reveal" data-venue="cvpr">
+                <div class="paper-media">
+                  <video muted autoplay loop playsinline preload="none" poster="images/efhq_before.png">
+                    <source src="images/efhq_after.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="paper-info">
+                  <a href="https://vinairesearch.github.io/EFHQ/" class="paper-title-link">
+                    <span class="papertitle">EFHQ: Multi-purpose ExtremePose-Face-HQ dataset.</span>
+                  </a>
+                  <div class="authors">
+                    <a href="https://trung-dt.com/">Trung Dao*</a>,
+                    <span class="author-me">Duc Vu*</span>,
+                    <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
+                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>
+                  </div>
+                  <div class="paper-meta">
+                    <span class="venue venue-cvpr">CVPR 2024</span>
+                    <div class="paper-links">
+                      <a href="https://vinairesearch.github.io/EFHQ/" class="paper-link">
+                        <i class="fa-solid fa-globe"></i> Website
+                      </a>
+                      <a href="https://arxiv.org/abs/2312.17205" class="paper-link">
+                        <i class="fa-solid fa-file-lines"></i> ArXiv
+                      </a>
+                    </div>
+                  </div>
+                  <p class="paper-desc">
+                    A high-quality dataset centered on extreme pose faces, supporting face synthesis,
+                    reenactment, recognition benchmarking, and more.
+                  </p>
+                </div>
+              </div>
 
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two"><video width=100% muted autoplay loop>
-              <source src="images/swiftbrushv2_after.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/swiftbrushv2_before.jpg' width=100%>
             </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a href="https://swiftbrushv2.github.io/">
-              <span class="papertitle">SwiftBrush v2: Make Your One-step Diffusion Model Better Than Its Teacher.</span>
-            </a>
-            <br>
-            <a href="https://trung-dt.com/">Trung Dao</a>, 
-            <a href="https://thuanz123.github.io/">Thuan Hoang Nguyen*</a>,
-            <a href="https://luvata.github.io/">Thanh Le*</a>,
-            <span class="author-me">Duc Vu*</span>,
-            <a href="https://www.khoinguyen.org/">Khoi Nguyen</a>,
-            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <span class="venue">ECCV</span>, 2024 &nbsp
-            <br>
-            <a href="https://swiftbrushv2.github.io/">Project page</a>
-            /
-            <a href="http://arxiv.org/abs/2408.14176">ArXiv</a>
-            <p></p>
-            <p>
-            An improved SwiftBrush version that makes the one-step diffusion student beats its multi-step teacher.
-            </p>
-          </td>
-        </tr>
-        
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two"><video width=100% muted autoplay loop>
-              <source src="images/efhq_after.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/efhq_before.png' width=100%>
-            </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a href="https://vinairesearch.github.io/EFHQ/">
-              <span class="papertitle">EFHQ: Multi-purpose ExtremePose-Face-HQ dataset.</span>
-            </a>
-            <br>
-            <a href="https://trung-dt.com/">Trung Dao*</a>, 
-            <span class="author-me">Duc Vu*</span>,
-            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <span class="venue">CVPR</span>, 2024 &nbsp
-            <br>
-            <a href="https://vinairesearch.github.io/EFHQ/">Project page</a>
-            /
-            <a href="https://arxiv.org/abs/2312.17205">ArXiv</a>
-            <p></p>
-            <p>
-            A high-quality dataset centered on extreme pose faces, supporting face synthesis, reenactment, recognition benchmarking, and more.
-            </p>
-          </td>
-        </tr>
-      </tbody></table>
+          </section>
 
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:16px;width:100%;vertical-align:middle">
-              <h2>Selected Preprints</h2>
-              <p>
-                <strong>* denotes equal contribution</strong>
-              </p>
-            </td>
-          </tr>
-      </tbody></table>
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:16px;width:20%;vertical-align:middle">
-            <div class="one">
-              <div class="two"><video style="width:100%; height:auto;" muted autoplay loop>
-              <source src="images/videodrift_5.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img style="width:100%; height:auto;" src='images/videodrift.png' width=100%>
+          <!-- Selected Preprints -->
+          <section class="section reveal" data-num="03">
+            <h2>Selected Preprints</h2>
+            <p class="contrib-note"><strong>* denotes equal contribution</strong></p>
+            <div class="papers-list">
+
+              <!-- VideoDrift: keep wide aspect ratio -->
+              <div class="paper-card reveal" data-venue="preprint">
+                <div class="paper-media paper-media--wide">
+                  <video muted autoplay loop playsinline preload="none" poster="images/videodrift.png">
+                    <source src="images/videodrift_5.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="paper-info">
+                  <span class="papertitle">VideoDrift: Plug-and-Play Video Refinement for Diffusion Models via KV-Anchored Attention.</span>
+                  <div class="authors">
+                    <a href="https://scholar.google.com/citations?hl=en&user=QCQPEhoAAAAJ">Ngan Nguyen</a>,
+                    <span class="author-me">Duc Vu</span>,
+                    <a href="https://nttung1110.github.io/">Trong-Tung Nguyen</a>,
+                    Phuc Hong Lai,
+                    <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
+                    <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>
+                  </div>
+                  <div class="paper-meta">
+                    <span class="venue venue-under-review">Under Review 2026</span>
+                  </div>
+                  <p class="paper-desc">
+                    A plug-and-play, backbone-agnostic video enhancer with low compute: each frame requires
+                    only inversion plus one generator pass, making it easy to deploy on outputs from diverse T2V systems.
+                  </p>
+                </div>
+              </div>
+
             </div>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <a>
-              <span class="papertitle">VideoDrift: Plug-and-Play Video Refinement for Diffusion Models via KV-Anchored Attention.</span>
-            </a>
-            <br>
-            Ngan Nguyen,
-            <span class="author-me">Duc Vu</span>,
-            <a href="https://nttung1110.github.io/">Trong-Tung Nguyen</a>,
-            Phuc Hong Lai,
-            <a href="https://sites.google.com/view/cuongpham/home/">Cuong Pham</a>,
-            <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a>,
-            <br>
-            <span class="venue venue-under-review">Under Review</span>, 2025 &nbsp
-            <br>
-            <p></p>
-            <p>
-            A plug-and-play, backbone-agnostic video enhancer with low compute: each frame requires only inversion plus one generator pass, making it easy to deploy on outputs from diverse T2V systems.
-            </p>
-          </td>
-        </tr>
-        </tbody></table>
-    </main>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <script>
+      /* ── Scroll-reveal ── */
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 55);
+          }
+        });
+      }, { threshold: 0.07 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      /* ── Lazy video autoplay (performance: preload="none" + play on viewport) ── */
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play().catch(() => {});
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { threshold: 0.25 });
+      document.querySelectorAll('.paper-media video').forEach(v => videoObserver.observe(v));
+
+      /* ── Card spotlight + 3D tilt ── */
+      document.querySelectorAll('.paper-card').forEach(card => {
+        let raf;
+
+        card.addEventListener('mouseenter', () => {
+          card.style.transition =
+            'transform 0.15s ease, box-shadow 0.25s ease, border-color 0.25s ease';
+        });
+
+        card.addEventListener('mousemove', e => {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            const r  = card.getBoundingClientRect();
+            const x  = e.clientX - r.left;
+            const y  = e.clientY - r.top;
+            const cx = r.width  / 2;
+            const cy = r.height / 2;
+            card.style.setProperty('--mx', `${x}px`);
+            card.style.setProperty('--my', `${y}px`);
+            card.style.transform =
+              `perspective(900px) rotateX(${((y - cy) / cy) * -3}deg) ` +
+              `rotateY(${((x - cx) / cx) * 4}deg) translateY(-4px) scale(1.008)`;
+          });
+        });
+
+        card.addEventListener('mouseleave', () => {
+          cancelAnimationFrame(raf);
+          card.style.transition =
+            'transform 0.55s cubic-bezier(0.34,1.56,0.64,1), ' +
+            'box-shadow 0.25s ease, border-color 0.25s ease';
+          card.style.transform = '';
+          setTimeout(() => { card.style.transition = ''; }, 620);
+        });
+      });
+
+      /* ── Magnetic social buttons ── */
+      document.querySelectorAll('.social-link').forEach(btn => {
+        const base = 'background .22s ease,border-color .22s ease,box-shadow .22s ease,color .22s ease';
+        btn.addEventListener('mouseenter', () => {
+          btn.style.transition = `transform 0.1s ease,${base}`;
+        });
+        btn.addEventListener('mousemove', e => {
+          const r = btn.getBoundingClientRect();
+          const x = (e.clientX - r.left - r.width  / 2) * 0.28;
+          const y = (e.clientY - r.top  - r.height / 2) * 0.28;
+          btn.style.transform = `translate(${x}px,${y}px) translateY(-3px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transition =
+            `transform 0.55s cubic-bezier(0.34,1.56,0.64,1),${base}`;
+          btn.style.transform = '';
+          setTimeout(() => { btn.style.transition = ''; }, 620);
+        });
+      });
+    </script>
   </body>
 </html>

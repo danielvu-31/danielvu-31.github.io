@@ -1,1 +1,1 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.# danielvu-31.github.io
+The website code is built from Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.

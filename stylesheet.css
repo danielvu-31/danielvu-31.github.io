@@ -1,151 +1,508 @@
-/* --- Global Styles --- */
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
+:root {
+  --bg:            #eef1ff;
+  --surface:       #ffffff;
+  --primary:       #4f6ef7;
+  --primary-dark:  #3b5bdb;
+  --primary-light: #dbe4ff;
+  --secondary:     #7048e8;
+  --text:          #0f172a;
+  --text-muted:    #2d3f55;
+  --border:        #e2e8f4;
+  --shadow:        0 1px 8px rgba(15,23,42,0.05), 0 4px 20px rgba(79,110,247,0.08);
+  --shadow-hover:  0 8px 28px rgba(15,23,42,0.10), 0 20px 50px rgba(79,110,247,0.16);
+  --radius:        18px;
+  --radius-sm:     10px;
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================================
+   Reset / Base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* Subtle dot-grid background — gives the content area depth */
 body {
-  font-family: 'Open Sans', 'Roboto', sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 20px;
+  font-family: 'Inter', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='1' fill='%234f6ef7' opacity='0.11'/%3E%3C/svg%3E");
 }
 
-/* --- Links --- */
 a {
-  color: #007bff;
+  color: var(--primary);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.22s ease;
 }
+a:hover { color: var(--secondary); text-decoration: underline; }
 
-a:hover {
-  color: #f09228;
-  text-decoration: underline;
-}
+/* ============================================================
+   Layout
+   ============================================================ */
+.page-wrapper { min-height: 100vh; }
+.container    { max-width: 920px; margin: 0 auto; padding: 0 28px; }
 
-/* Links in paper listings — muted so author-me stands out */
-main a {
-  color: #5d6d7e;
-}
-
-main a:hover {
-  color: #7d8fa3;
-}
-
-/* --- Headings --- */
-h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #007bff;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 10px;
-}
-
-/* --- Name --- */
-.name {
-  font-size: 42px;
-  font-weight: 700;
-  color: #333;
-  margin: 0;
-  padding-bottom: 20px;
-}
-
-/* --- Paper Title --- */
-.papertitle {
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
-}
-
-/* --- Publication Section --- */
-.one {
-  width: 160px;
-  height: 160px;
+/* ============================================================
+   Hero Header
+   ============================================================ */
+.profile-section {
+  background: linear-gradient(145deg, #060818 0%, #0c0b2c 30%, #0e1d4a 65%, #071535 100%);
+  padding: 72px 0 66px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.two {
-  width: 100%;
-  height: 100%;
+/* Drifting colour orbs */
+.header-bg-glow {
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1; /* Video always visible, auto-plays */
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 12% 45%, rgba(79,110,247,0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 60% at 88% 18%, rgba(112,72,232,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 50% at 55% 88%, rgba(6,182,212,0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 40% at 38% 8%,  rgba(244,63,94,0.10) 0%, transparent 55%);
+  animation: glowDrift 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes glowDrift {
+  0%   { transform: scale(1)    translate(0,    0);   opacity: 0.80; }
+  33%  { transform: scale(1.05) translate(-2%,  1%);  opacity: 1;    }
+  66%  { transform: scale(1.03) translate( 1%, -2%);  opacity: 0.92; }
+  100% { transform: scale(1.09) translate(-1%,  2%);  opacity: 1;    }
+}
+
+/* Profile grid */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 52px;
+  align-items: center;
+  position: relative;
   z-index: 1;
 }
 
-.one .two + img {
-  display: none; /* Hide static image when video is always shown */
+/* ---- Name ---- */
+.name {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  line-height: 1.03;
+  margin-bottom: 22px;
+  background: linear-gradient(130deg, #ffffff 0%, #b4c8ff 45%, #d0b6ff 80%, #ffc2e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: nameReveal 1s cubic-bezier(0.16,1,0.3,1) both;
+}
+@keyframes nameReveal {
+  from { opacity: 0; transform: translateY(28px); letter-spacing: 10px; }
+  to   { opacity: 1; transform: translateY(0);    letter-spacing: -2.5px; }
 }
 
-/* --- Fade animation --- */
-.fade {
-  transition: opacity .2s ease-in-out;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);    }
 }
 
-/* --- Highlight --- */
-span.highlight {
-  background-color: #fff3cd;
+/* ---- Bio ---- */
+.bio {
+  color: rgba(255,255,255,0.95);
+  font-size: 14px;
+  line-height: 1.82;
+  margin-bottom: 18px;
+  animation: fadeUp 0.7s 0.3s cubic-bezier(0.16,1,0.3,1) both;
+}
+.bio a {
+  color: #93c5fd;
+  border-bottom: 1px solid rgba(147,197,253,0.40);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, border-color 0.2s;
+}
+.bio a:hover { color: #bfdbfe; border-bottom-color: #bfdbfe; text-decoration: none; }
+
+/* ---- Internship banner ---- */
+.phd-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(251,191,36,0.18) 0%, rgba(217,119,6,0.14) 100%);
+  border: 1.5px solid rgba(251,191,36,0.40);
+  border-radius: var(--radius-sm);
+  padding: 11px 20px;
+  color: #fde68a;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 18px rgba(245,158,11,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeUp 0.7s 0.5s cubic-bezier(0.16,1,0.3,1) both;
 }
 
-/* --- Author name highlight (in paper listings) --- */
+/* ---- Social links ---- */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  animation: fadeUp 0.7s 0.65s cubic-bezier(0.16,1,0.3,1) both;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50px;
+  color: rgba(255,255,255,0.86) !important;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.22s, border-color 0.22s, box-shadow 0.22s, color 0.22s;
+}
+.social-link:hover {
+  background: rgba(255,255,255,0.20);
+  border-color: rgba(255,255,255,0.40);
+  color: #fff !important;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.28);
+  text-decoration: none !important;
+}
+.social-link i { font-size: 15px; }
+
+/* ---- Profile photo ---- */
+.profile-photo-wrapper {
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.7s 0.2s cubic-bezier(0.16,1,0.3,1) both;
+}
+.profile-photo-wrapper > a {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.profile-photo {
+  width: 170px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 75%;
+  display: block;
+  border: 3px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.profile-photo-wrapper:hover .profile-photo {
+  transform: scale(1.04) rotate(-0.5deg);
+  border-color: rgba(147,197,253,0.55);
+  box-shadow: 0 18px 50px rgba(79,110,247,0.38);
+}
+
+/* ============================================================
+   Main Content
+   ============================================================ */
+main { padding: 54px 0 76px; }
+.section { margin-bottom: 60px; }
+
+/* Auto section number injected via data-num attribute */
+.section[data-num]::before {
+  content: attr(data-num) " /";
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.50;
+  margin-bottom: 4px;
+}
+
+/* Section headings with gradient underline */
+h2 {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+  position: relative;
+}
+h2::after {
+  content: '';
+  display: block;
+  height: 3px;
+  margin-top: 7px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 55%, transparent 100%);
+  border-radius: 2px;
+}
+
+/* ---- Research ---- */
+.research-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary);
+  margin-top: 18px;
+}
+
+.research-text {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.84;
+}
+.research-text strong { color: var(--text); font-weight: 600; }
+
+/* Research-theme chips */
+.research-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.chip:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.10); }
+.chip-blue   { background: rgba(79,110,247,0.12); color: #3b5bdb; }
+.chip-purple { background: rgba(112,72,232,0.12); color: #6c38d6; }
+.chip-teal   { background: rgba(6,182,212,0.12);  color: #0e7490; }
+.chip-rose   { background: rgba(244,63,94,0.12);  color: #be123c; }
+.chip-amber  { background: rgba(245,158,11,0.12); color: #92400e; }
+
+.contrib-note {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 8px 0 22px;
+}
+
+/* ============================================================
+   Paper Cards
+   ============================================================ */
+.papers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.paper-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 22px;
+  /* Spotlight glow follows cursor via JS-set --mx / --my */
+  background:
+    radial-gradient(
+      480px circle at var(--mx, -9999px) var(--my, -9999px),
+      rgba(79, 110, 247, 0.08) 0%,
+      transparent 60%
+    ),
+    var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  /* Default left accent — overridden per venue below */
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--border);
+  align-items: start;
+  position: relative;
+  will-change: transform;
+  transition: box-shadow 0.22s ease;
+}
+.paper-card:hover { box-shadow: var(--shadow-hover); }
+
+/* Coloured left stripe per conference */
+.paper-card[data-venue="cvpr"]     { border-left-color: #4f6ef7; }
+.paper-card[data-venue="neurips"]  { border-left-color: #0ca678; }
+.paper-card[data-venue="eccv"]     { border-left-color: #f59f00; }
+.paper-card[data-venue="preprint"] { border-left-color: #94a3b8; }
+
+/* ---- Paper media: SQUARE + CONTAIN (no crop) ---- */
+.paper-media {
+  width:  180px;
+  height: 180px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+  /* Dark letterbox bars when aspect doesn't match the square */
+  background: #0b0b18;
+}
+.paper-media video,
+.paper-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* show full frame, no cropping */
+  display: block;
+}
+
+/* VideoDrift override: keep natural wide aspect */
+.paper-media--wide {
+  height: 112px;         /* ~16:9 at 180px width */
+}
+.paper-media--wide video,
+.paper-media--wide img {
+  object-fit: cover;
+}
+
+/* ---- Paper text ---- */
+.paper-title-link {
+  display: block;
+  margin-bottom: 6px;
+  text-decoration: none !important;
+}
+.papertitle {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.40;
+  transition: color 0.22s ease;
+}
+.paper-title-link:hover .papertitle { color: var(--primary); }
+
+/* Authors */
+.authors {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.62;
+  margin: 4px 0 10px;
+}
+.authors a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 0 2px;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.authors a:hover {
+  color: #1d4ed8;
+  background: rgba(37,99,235,0.09);
+  text-decoration: none;
+}
+
+/* "Duc Vu" highlight — rose so it's unmistakable against blue co-author links */
 .author-me {
   font-weight: 700;
-  color: #007bff;
-  background-color: rgba(0, 123, 255, 0.18);
-  padding: 1px 6px;
-  border-radius: 3px;
+  color: #c41438 !important;
+  background: rgba(220, 20, 60, 0.11);
+  border: 1px solid rgba(220, 20, 60, 0.22);
+  padding: 1px 7px;
+  border-radius: 5px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-/* --- Conference/venue badge --- */
+/* Paper meta row (venue badge + links) */
+.paper-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Venue badges with shimmer sweep */
 .venue {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-weight: 700;
-  font-style: normal;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white;
-  padding: 2px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-}
-
-.venue-under-review {
-  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-}
-
-/* --- Colored Box (if you want to use it) --- */
-.colored-box {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.media-container {
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 50px;
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9; /* change if needed */
   overflow: hidden;
 }
-
-.media-container imgh,
-.media-container videoh {
+.venue::after {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* or cover */
+  top: 0; left: -120%;
+  width: 55%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.30), transparent);
+  transform: skewX(-20deg);
+  animation: venueShimmer 4.5s ease-in-out infinite;
+}
+@keyframes venueShimmer {
+  0%   { left: -120%; }
+  28%  { left: 150%;  }
+  100% { left: 150%;  }
+}
+.venue-cvpr        { background: linear-gradient(135deg, #4f6ef7, #7048e8); }
+.venue-neurips     { background: linear-gradient(135deg, #0ca678, #087f5b); }
+.venue-eccv        { background: linear-gradient(135deg, #f59f00, #d97706); }
+.venue-iccv        { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+.venue-iclr        { background: linear-gradient(135deg, #e85d04, #c94b00); }
+.venue-icml        { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.venue-aaai        { background: linear-gradient(135deg, #b45309, #92400e); }
+.venue-siggraph    { background: linear-gradient(135deg, #db2777, #be185d); }
+.venue-under-review { background: linear-gradient(135deg, #94a3b8, #64748b); }
+
+/* Link pills */
+.paper-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border: 1.5px solid var(--primary-light);
+  border-radius: 50px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background 0.22s ease, color 0.22s ease,
+              border-color 0.22s ease, transform 0.22s ease;
+}
+.paper-link:hover {
+  background: var(--primary);
+  color: #fff !important;
+  border-color: var(--primary);
+  transform: scale(1.06);
+  text-decoration: none !important;
 }
 
-/* Hide ClustrMaps widget (script still runs for visitor tracking) */
+/* Paper abstract */
+.paper-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.66;
+}
+
+/* ============================================================
+   Scroll-reveal
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.52s ease, transform 0.52s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   ClustrMaps — hidden but script still fires
+   ============================================================ */
 #clustrmaps-wrapper,
 [id*="clustrmaps"],
 [class*="clustrmaps"],
@@ -163,4 +520,27 @@ script#clustrmaps ~ div[style*="clustr"] {
   left: -9999px !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 700px) {
+  .name           { font-size: 40px; letter-spacing: -1.5px; }
+  .profile-grid   { grid-template-columns: 1fr; gap: 28px; }
+  .profile-photo-wrapper { order: -1; }
+  .profile-photo  { width: 120px; border-radius: 14px; }
+
+  .paper-card     { grid-template-columns: 1fr; }
+  .paper-media    { width: 100% !important; height: 200px !important; }
+  .paper-media video,
+  .paper-media img { object-fit: cover !important; }
+
+  h2 { font-size: 21px; }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .social-link span { display: none; }
+  .social-link { padding: 8px 12px; }
 }
